@@ -26,12 +26,12 @@ jobs:
       
       - name: Render Quarto document
         run: |
-          quarto render readme.qmd --to gfm --output README. md
+          quarto render README.qmd --to gfm --output README.md
           
       - name: Commit README.md
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Update README. md from readme.qmd"
+          git commit -m "Update README.md from readme.qmd"
           git push env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
