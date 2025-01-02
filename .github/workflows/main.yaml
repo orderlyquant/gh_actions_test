@@ -35,5 +35,5 @@ jobs:
           git add README.md
           git commit -m "Update README.md from readme.qmd"
           git push
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
